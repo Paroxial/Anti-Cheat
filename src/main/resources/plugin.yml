@@ -1,0 +1,8 @@
+name: ${project.name}
+version: ${project.version}
+author: Paroxial
+main: com.paroxial.anticheat.AntiCheatPlugin
+
+commands:
+  anticheat:
+    permission: anticheat.use
