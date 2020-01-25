@@ -5,7 +5,6 @@ import com.paroxial.anticheat.Theme;
 import com.paroxial.anticheat.check.event.CheckBanEvent;
 import com.paroxial.anticheat.check.event.CheckFlagEvent;
 import com.paroxial.anticheat.player.PlayerData;
-import java.util.Objects;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -20,9 +19,7 @@ public class CheckListener implements Listener {
             return;
         }
 
-        plugin.getAlertManager().getAlertedPlayerIds().stream()
-                .map(Bukkit::getPlayer).filter(Objects::nonNull).filter(Player::isOnline)
-                .forEach(player -> player.sendMessage(Theme.PREFIX + event.getMessage()));
+        plugin.getAlertManager().alertPlayers(Theme.PREFIX + event.getMessage());
     }
 
 
