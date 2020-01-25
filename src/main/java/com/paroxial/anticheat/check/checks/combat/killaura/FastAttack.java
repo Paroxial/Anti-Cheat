@@ -32,7 +32,7 @@ public class FastAttack extends Check {
             if (++clientTicks == 20) {
                 if (attacks > ATTACK_FREQUENCY_LIMIT) {
                     // Only trigger a violation if the player is not lagging
-                    if (data.getStats().isLagging()) {
+                    if (!data.getStats().isLagging()) {
                         trigger("Attacks: " + attacks);
                     }
                 }

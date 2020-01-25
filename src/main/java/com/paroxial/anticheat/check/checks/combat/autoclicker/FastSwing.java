@@ -29,7 +29,7 @@ public class FastSwing extends Check {
             if (++clientTicks == 20) {
                 if (swings > SWING_FREQUENCY_LIMIT) {
                     // Only trigger a violation if the player is not lagging
-                    if (data.getStats().isLagging()) {
+                    if (!data.getStats().isLagging()) {
                         trigger("Swings: " + swings);
                     }
                 } else {
