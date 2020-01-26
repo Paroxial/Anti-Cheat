@@ -5,9 +5,9 @@ import org.bukkit.Location;
 
 @UtilityClass
 public class LocationUtils {
-    private static final double ONE_SIXTY_FORTH = 0.015625;
+    private static final double ONE_SIXTY_FOURTH = 0.015625;
 
     public boolean isOnGround(Location location) {
-        return location.getY() % ONE_SIXTY_FORTH == 0.0;
+        return location.getY() % ONE_SIXTY_FOURTH == 0.0;
     }
 }
